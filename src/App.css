@@ -1,0 +1,97 @@
+/* src/App.css */
+.app {
+  min-height: 100vh;
+  background: url("../public/bg.svg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Выравнивание влево */
+  justify-content: center;
+  padding-left: 160px; /* Отступ слева */
+  padding-top: 280px; /* Отступ сверху */
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 627px; /* Ограничиваем ширину */
+}
+
+.hero-section h1 {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 48px;
+  background: linear-gradient(90deg, #FF56FD, #11E9FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  max-width: 627px; /* Делаем ширину фиксированной, чтобы был перенос строк */
+  word-wrap: break-word; /* Переносим слова, если не влезают */
+}
+
+.hero-section p {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 24px; /* Изменено с 18px на 24px */
+  color: #C56AC3; /* Соответствует макету */
+  text-align: left;
+  margin-top: 15px; /* Добавляем правильный отступ */
+  max-width: 642px; /* Ограничиваем ширину, чтобы не расползалось */
+  line-height: 1.3; /* Делаем текст читаемым */
+}
+
+
+.cta-button {
+  margin-top: 30px;
+  width: 648px;
+  height: 61px;
+  font-size: 20px;
+  font-family: "Audiowide", sans-serif;
+  color: #FFFFFF;
+  border-radius: 23px; /* Теперь скругление работает */
+  background: transparent;
+  border: none; /* Убираем стандартную рамку */
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Добавляем обводку через псевдоэлемент */
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 23px;
+  padding: 4px; /* Толщина рамки */
+  background: linear-gradient(90deg, #FF56FD, #11E9FD);
+  -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+/* Ховер эффект */
+.cta-button:hover {
+  background: linear-gradient(90deg, #FF56FD, #11E9FD);
+  color: black;
+}
+
+.ethereum-button {
+  position: absolute;
+  top: 262px;   /* Настроено по макету Figma */
+  left: 1000px;  /* Настроено по макету Figma */
+  width: 500px;  /* Размер из Figma */
+  height: 500px; /* Размер из Figma */
+}

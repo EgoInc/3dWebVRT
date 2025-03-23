@@ -1,0 +1,40 @@
+/* src/components/Header.css */
+.header {
+    display: flex;
+    justify-content: flex-start; /* Выравнивание влево */
+    align-items: center;
+    padding: 20px 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-family: "Audiowide", sans-serif;
+    font-size: 48px;
+    background: linear-gradient(90deg, #FF56FD, #11E9FD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #11E9FD;
+    font-family: "Audiowide", sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #FF56FD;
+  }
+  
